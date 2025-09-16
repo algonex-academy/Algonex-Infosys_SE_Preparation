@@ -65,3 +65,14 @@ _**Key Preparation Tips**_
 - Practice Pseudocode & Puzzle solving daily.
 - Write essays in simple, structured patterns (Intro → Body → Conclusion).
 - Manage time well – each section is speed-based.
+
+| Section                              | No. of Questions | Time (mins) | Key Topics                                                                                        |
+| ------------------------------------ | ---------------- | ----------- | ------------------------------------------------------------------------------------------------- |
+| **Quantitative / Technical Ability** | 10               | 35          | Number Systems, Data Interpretation, Percentages, Ratios, Partnerships, Averages, Algebra, Time-Speed-Distance, Profit & Loss |
+| **Logical Reasoning**                | 15               | 25          | Puzzles, Syllogisms, Series, Data Sufficiency, Coding-Decoding, Blood Relations                                               |
+| **Verbal Ability / English**         | 20               | 20          | Reading Comprehension, Para-Jumbles, Sentence Correction, Vocabulary                                                          |
+| **Pseudocode**                       | 5                | 10          | Algorithm logic, Programming basics (C/C++), DSA concepts                                                                     |
+| **Puzzle Solving**                   | 4                | 10          | Mathematical & Logical puzzles, Number patterns                                                                               |
+| **English Grammar**                  | 5                | 10          | Sentence Correction, Grammar rules                                                                                            |
+| **English Writing**                  | 1                | 10          | Essay / Cloze passage (150–200 words, clear structure)                                            |
+
