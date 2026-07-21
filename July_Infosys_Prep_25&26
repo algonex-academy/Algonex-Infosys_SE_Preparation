@@ -14,22 +14,22 @@ For the next 30 days:
 Minimum six focused hours every day:: No copied code and no watching solutions before completing a genuine attempt.
 
 Every solution must include:
-Brute-force approach
-Optimised approach
-Time complexity
-Space complexity
-Edge cases
-Dry run
-Students must code in one primary language only during the interview preparation
-Every student must explain their project without reading from the résumé
-Attendance without performance receives no credit
-Every incorrect question goes into an error notebook
-Every Sunday is an elimination-style mock interview
-Students who repeatedly fail basics return to foundation training immediately
-No student says, “I know the concept,” unless they can explain it and code it
+- Brute-force approach
+- Optimised approach
+- Time complexity
+- Space complexity
+- Edge cases
+- Dry run
+
+-> Students must code in one primary language only during the interview preparation
+-> Every student must explain their project without reading from the resume
+-> Attendance without performance receives no credit
+-> Every incorrect question goes into an error notebook
+-> Every Sunday is an elimination-style mock interview
+-> Students who repeatedly fail basics return to foundation training immediately
 
 
-## Daily SCHEDULE
+## Daily SCHEDULE chudandii
    Duration                     Activity                                         
  45 minutes | Previous-day revision and rapid-fire questioning 
     2 hours | DSA learning and implementation                  
@@ -52,18 +52,18 @@ Coding topics:::
 - Sliding window
 - Prefix sum
 - Basic recursion
-Technical subjects
-OOP pillars
-Class versus object
-Abstraction versus encapsulation
-Overloading versus overriding
-Interfaces and abstract classes
-Primary key and foreign key
-Normalisation
-SQL joins
-Processes versus threads
-HTTP and HTTPS basics
-Project preparation
+->Technical subjects
+-> OOP pillars
+-> Class versus object
+-> Abstraction versus encapsulation
+-> Overloading versus overriding
+-> Interfaces and abstract classes
+- Primary key and foreign key
+- Normalisation
+- SQL joins
+- Processes versus threads
+-> HTTP and HTTPS basics
+-> Project preparation
 
 Every student must prepare:
 -> A 60-second project summary
@@ -88,13 +88,13 @@ A student who cannot solve basic arrays, strings, SQL joins and OOP questions by
 
 
 Mana Week 1 Mission aypovaali:: By the end of seven days, every student must be able to:
-Write clean programs without copying
-Analyse time and space complexity
-Solve basic and intermediate array, string, hashing, sorting and binary-search problems
-Explain fundamental OOP concepts with code
-Write SQL joins, grouping and subqueries
-Present a project confidently for at least three minutes
-Complete a 60-minute coding assessment under pressure
+-> Write clean programs without copying
+-> Analyse time and space complexity
+-> Solve basic and intermediate array, string, hashing, sorting and binary-search problems
+-> Explain fundamental OOP concepts with code
+-> Write SQL joins, grouping and subqueries
+-> Present a project confidently for at least three minutes
+-> Complete a 60-minute coding assessment under pressure
 
 Week 1 is not about advanced graphs or dynamic programming. It is about removing weak fundamentals
 
