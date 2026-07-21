@@ -1,0 +1,87 @@
+DSE — Digital Specialist Engineer
+SP L1 — Specialist Programmer Level 1
+SP L2 — Specialist Programmer Level 2
+SP L3 — Specialist Programmer Level 3
+
+ Internal target                 Expected interview standard                                                                                       
+ DSE-ready       | Strong fundamentals, clean easy/medium coding, SQL, OOP, project explanation                                      
+ SP L1-ready     | Consistent medium DSA, optimisation, strong CS fundamentals                                                       
+ SP L2-ready     | Medium-hard DSA, DP, graphs, trees, deeper project and design reasoning                                           
+ SP L3-ready     | Hard/complex problem-solving, multiple approaches, proof of correctness, excellent optimisation and communication 
+
+For the next 30 days:
+
+Minimum six focused hours every day:: No copied code and no watching solutions before completing a genuine attempt.
+
+Every solution must include:
+Brute-force approach
+Optimised approach
+Time complexity
+Space complexity
+Edge cases
+Dry run
+Students must code in one primary language only during the interview preparation
+Every student must explain their project without reading from the résumé
+Attendance without performance receives no credit
+Every incorrect question goes into an error notebook
+Every Sunday is an elimination-style mock interview
+Students who repeatedly fail basics return to foundation training immediately
+No student says, “I know the concept,” unless they can explain it and code it
+
+
+## Daily SCHEDULE
+   Duration                     Activity                                         
+ 45 minutes | Previous-day revision and rapid-fire questioning 
+    2 hours | DSA learning and implementation                  
+     1 hour | Core CS: OOP, DBMS, OS or networks               
+ 45 minutes | SQL and database practice                        
+ 45 minutes | Project, résumé and behavioural preparation      
+ 45 minutes | Timed coding or mock interview                   
+
+####Four-Week Preparation Plan
+Week 1: Mundhu Weak Foundationni DESTROY cheyaali
+Coding topics:::
+- Language syntax and standard libraries
+- Time and space complexity
+- Arrays
+- Strings
+- Hash maps and sets
+- Sorting
+- Binary search
+- Two pointers
+- Sliding window
+- Prefix sum
+- Basic recursion
+Technical subjects
+OOP pillars
+Class versus object
+Abstraction versus encapsulation
+Overloading versus overriding
+Interfaces and abstract classes
+Primary key and foreign key
+Normalisation
+SQL joins
+Processes versus threads
+HTTP and HTTPS basics
+Project preparation
+
+Every student must prepare:
+-> A 60-second project summary
+-> A three-minute detailed explanation
+-> Their exact contribution
+-> Architecture
+-> Database design
+- >APIs or modules
+-> Biggest technical problem
+How they tested the application
+What they would improve
+How the application could scale
+
+Week 1 target
+- 30 coding problems
+- 25 SQL queries
+- One resume interrogation
+- One project presentation
+- One 45-minute technical mock
+
+A student who cannot solve basic arrays, strings, SQL joins and OOP questions by Day 7 is not yet DSE-ready
