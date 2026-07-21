@@ -85,3 +85,423 @@ Week 1 target
 - One 45-minute technical mock
 
 A student who cannot solve basic arrays, strings, SQL joins and OOP questions by Day 7 is not yet DSE-ready
+
+
+Mana Week 1 Mission aypovaali:: By the end of seven days, every student must be able to:
+Write clean programs without copying
+Analyse time and space complexity
+Solve basic and intermediate array, string, hashing, sorting and binary-search problems
+Explain fundamental OOP concepts with code
+Write SQL joins, grouping and subqueries
+Present a project confidently for at least three minutes
+Complete a 60-minute coding assessment under pressure
+
+Week 1 is not about advanced graphs or dynamic programming. It is about removing weak fundamentals
+
+###For every problem, students must write:
+
+Problem understanding
+Sample input and output
+Brute-force approach
+Optimised approach
+Time complexity
+Space complexity
+Code
+Dry run
+Edge cases
+
+Students must attempt a problem for at least 25 minutes before seeing any hint
+
+###Day 1 — Programming Fundamentals and Complexity
+Youy must revise:
+-> Variables and data types
+-> Input and output
+-> Operators
+-. Conditional statements
+-> Loops
+-> Functions
+-> Lists/arrays
+-> Strings
+-> Dictionaries/maps
+->Sets
+->Exception handling basics
+
+By the end of Day 1, every student must be able to:
+Take input and produce output correctly in Python
+Use variables, conditions, loops, functions, lists, dictionaries and sets
+Explain basic time and space complexity
+Solve six elementary coding problems without copying
+Create a simple Python class
+Deliver a one-minute self-introduction
+
+###Complexity - Students must clearly understand:
+What is an algorithm?
+Time complexity
+Space complexity
+Big-O notation
+O(1)
+O(log n)
+O(n)
+O(n log n)
+O(n²)
+Why nested loops are not always O(n²)
+Difference between input size and input value
+
+###Coding Problems
+Find the largest element in an array
+Find the second-largest element
+Reverse an array
+Check whether an array is sorted
+Count even and odd numbers
+Find the sum and average of an array
+Core CS
+
+Introduction to OOP:
+Class, Object, Attribute, Method. Constructor
+Prathi student must create one simple Algonex Student or Employee class
+
+###Communication Task
+Prepare a 60-second self-introduction containing:
+Name and education
+Primary programming language
+Technical skills
+Best project
+Role being targeted
+One professional strength
+
+###Final Day 1 Test
+10 complexity questions
+Two coding problems
+Five programming-language questions
+One-minute introduction
+
+##Session 1 — Baseline Assessment
+Write a program to check whether a number is even or odd
+Write a program to print numbers from 1 to 10
+Write a function that returns the sum of two numbers
+What is the difference between a list and a set?
+What is the time complexity of traversing an array of n elements?
+
+##What is the time complexity of traversing an array of n elements?
+1. Variables and Data Types
+Now answer this folks::
+What is dynamically typed language?
+What is the type of 10 / 2?
+Can a variable change its data type in Python?
+What is the difference between int and float?
+What is the difference between True and "True"?
+
+2. Input and Output
+a, b = map(int, input().split())
+print(a + b) #meeru must know that input() returns a string
+
+3. Operators (/, //)
+Arithmetic operators
+Comparison operators
+Logical operators
+
+Session 3 — Conditions, Loops and Functions
+1. Conditional Statements
+if
+elif
+else
+Nested conditions
+Boolean expressions
+
+#Practice Tasks
+Check whether a number is positive, negative or zer
+Find the largest of three numbers
+Check whether a year is a leap year
+Check whether a student passed or failed
+
+###2. Loops
+For loop # range(5), range(1, 6)
+While loop
+
+#Loop Practice
+Print numbers from 1 to 20
+Print even numbers from 1 to 50
+Print the multiplication table of a number
+Calculate the sum from 1 to n
+Count the number of digits in an integer
+
+##3. Functions
+Students must understand:
+Function definition
+Parameters
+Arguments
+Return value
+Local variables
+Reusability
+
+def display_sum(a, b):          def calculate_sum(a, b):
+    print(a + b)                         return a + b
+#Why is returning a value generally more reusable than printing inside a function?
+
+Checking even or odd
+Finding the maximum of two numbers
+Calculating factorial
+Counting vowels in a string
+
+##Session 4 — Lists, Dictionaries and Sets
+1. Lists: Indexing, Negative indexing, Slicing, append. insert, remove, pop, sort, reverse, len
+
+#List Traversal
+numbers = [10, 20, 30]
+for number in numbers:
+    print(number)
+
+#With index:
+for index in range(len(numbers)):
+    print(index, numbers[index])
+
+#2. Dictionaries
+student = {
+    "name": "Ravi",
+    "marks": 85,
+    "city": "Bengaluru"
+}
+
+print(student["name"])
+student["marks"] = 90
+
+#Frequency counting:
+numbers = [1, 2, 2, 3, 3, 3]
+frequency = {}
+for number in numbers:
+    frequency[number] = frequency.get(number, 0) + 1
+print(frequency)
+
+##3. Sets
+Sets store unique values
+Sets do not support normal indexing
+Membership checking is usually efficient
+
+seen = set()
+seen.add(10)
+seen.add(20)
+print(10 in seen)
+
+##Session 5 — Time and Space Complexity
+Time Complexity?: describes how the number of operations grows as the input size grows
+
+##O(1) — Constant Time
+numbers = [10, 20, 30, 40]
+print(numbers[0]) #The operation does not depend on the array size
+
+#O(n) — Linear Time
+for number in numbers:
+    print(number) #If there are n numbers, the loop executes n times
+
+#O(n²) — Quadratic Time
+for i in range(len(numbers)):
+    for j in range(len(numbers)):
+        print(numbers[i], numbers[j]) # For n elements, approximately n × n operations occur
+
+# O(log n) — Logarithmic Time - Binary search repeatedly divides the search space into half
+def binary_search(numbers, target):
+    left = 0
+    right = len(numbers) - 1
+    while left <= right:
+        middle = (left + right) // 2
+
+        if numbers[middle] == target:
+            return middle
+        elif numbers[middle] < target:
+            left = middle + 1
+        else:
+            right = middle - 1
+    return -1 # ikkada Time complexity: O(log n)
+
+##O(n log n)
+Efficient sorting algorithms such as merge sort usually take:
+O(n log n)
+Complexity Order
+
+From fastest growth to slowest performance:
+O(1)
+O(log n)
+O(n)
+O(n log n)
+O(n²)
+O(2ⁿ)
+O(n!)
+
+########
+print(numbers[5]) # O(1)
+
+for number in numbers:
+    print(number) # O(n)
+
+for i in numbers:
+    for j in numbers:
+        print(i, j) # O(n²)
+
+for i in range(0, len(numbers), 2):
+    print(numbers[i]) #O(n)
+
+i = 1
+while i < n:
+    i *= 2 # O(log n)
+
+#Nested loops do not always mean O(n²).
+for i in range(n):
+    print(i)
+for j in range(n):
+    print(j) #O(n) + O(n) = O(2n) = O(n)
+#It is not O(n²) because the loops are sequential, not nested
+
+####Session 6 — Guided Coding Problems
+Problem 1 — Largest Element
+Input: [4, 8, 2, 10, 6]
+Output: 10
+
+def find_largest(numbers):
+    largest = numbers[0]
+
+    for number in numbers:
+        if number > largest:
+            largest = number
+    return largest
+
+numbers = [4, 8, 2, 10, 6]
+print(find_largest(numbers))
+##Time: O(n)
+Space: O(1)
+
+Problem 2 — Second-Largest Distinct Element
+def find_second_largest(numbers):
+    largest = None
+    second_largest = None
+
+    for number in numbers:
+        if largest is None or number > largest:
+            second_largest = largest
+            largest = number
+        elif number != largest and (
+            second_largest is None or number > second_largest
+        ):
+            second_largest = number
+    return second_largest
+print(find_second_largest([10, 5, 8, 10, 7])) # 0
+##Time: O(n)
+Space: O(1)
+
+##Problem 3 — Reverse an Array
+def reverse_array(numbers):
+    left = 0
+    right = len(numbers) - 1
+
+    while left < right:
+        numbers[left], numbers[right] = numbers[right], numbers[left]
+        left += 1
+        right -= 1
+
+    return numbers
+print(reverse_array([1, 2, 3, 4, 5]))
+
+#Complexity:
+Time: O(n)
+Space: O(1)
+
+###Problem 4 — Check Whether an Array Is Sorted
+def is_sorted(numbers):
+    for index in range(1, len(numbers)):
+        if numbers[index] < numbers[index - 1]:
+            return False
+    return True
+print(is_sorted([1, 2, 3, 5]))
+print(is_sorted([1, 4, 2, 5]))
+
+#Complexity:
+Time: O(n)
+Space: O(1)
+
+#Problem 5 — Count Even and Odd Numbers
+def count_even_odd(numbers):
+    even_count = 0
+    odd_count = 0
+
+    for number in numbers:
+        if number % 2 == 0:
+            even_count += 1
+        else:
+            odd_count += 1
+
+    return even_count, odd_count
+even, odd = count_even_odd([1, 2, 3, 4, 5, 6])
+print("Even:", even)
+print("Odd:", odd)
+
+#Problem 6 — Sum and Average
+def calculate_sum_and_average(numbers):
+    if not numbers:
+        return 0, 0
+
+    total = 0
+    for number in numbers:
+        total += number
+    average = total / len(numbers)
+    return total, average
+total, average = calculate_sum_and_average([10, 20, 30, 40])
+
+print("Sum:", total)
+print("Average:", average) #Meeru must explain why the empty-list check is required.
+
+###Session 7 — OOP Introduction
+Class and Object
+class Student:
+    def __init__(self, name, marks):
+        self.name = name
+        self.marks = marks
+
+    def display_details(self):
+        print("Name:", self.name)
+        print("Marks:", self.marks)
+
+    def has_passed(self):
+        return self.marks >= 40
+student1 = Student("Ravi", 85)
+student1.display_details()
+print(student1.has_passed())
+
+Class: A blueprint used to create objects.
+Object: A real instance created from a class.
+Attribute: Data belonging to an object
+
+Examples:
+self.name
+self.marks
+
+Method: A function defined inside a class
+Constructor: The __init__ method that initializes a new object
+self: self refers to the current object
+
+## OOP Coding Task
+Create an Employee class with:
+name
+employee_id
+salary
+A method to display employee details
+A method to calculate annual salary
+
+Expected structure:
+class Employee:
+    def __init__(self, name, employee_id, salary):
+        self.name = name
+        self.employee_id = employee_id
+        self.salary = salary
+
+    def display_details(self):
+        print(self.name, self.employee_id, self.salary)
+    def annual_salary(self):
+        return self.salary * 12
+
+Find the smallest element in an array
+Find the largest and smallest elements together
+Count positive, negative and zero values
+Find the sum of elements at even indexes
+Reverse an array without using reverse()
+Check whether all array elements are unique
+Create a BankAccount class
+Calculate factorial using a function
