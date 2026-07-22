@@ -284,6 +284,15 @@ print(10 in seen)
 
 ##Session 5 — Time and Space Complexity
 Time Complexity?: describes how the number of operations grows as the input size grows
+-> Time complexity measures how the running time of an algorithm increases as the input size n increases
+-> Space complexity measures how much additional memory an algorithm requires as n increases
+
+ O(1)       | Constant     | Accessing arr[0]            
+ O(log n)  | Logarithmic  | Binary search                  
+ O(n)       | Linear       | One loop through an array      
+ O(n log n) | Linearithmic | Merge sort                     
+ O(n²)      | Quadratic    | Two nested loops               
+ O(2ⁿ)      | Exponential  | Some recursive subset problems 
 
 ##O(1) — Constant Time
 numbers = [10, 20, 30, 40]
@@ -326,6 +335,39 @@ O(n log n)
 O(n²)
 O(2ⁿ)
 O(n!)
+
+Example 1: One loop
+def print_numbers(numbers):
+    for number in numbers:
+        print(number)
+Ikkada Time complexity: O(n) because the loop executes n times
+Space complexity: O(1) because no extra data structure grows with the input
+
+Example 2: Nested loops
+def print_pairs(numbers):
+    for first in numbers:
+        for second in numbers:
+            print(first, second)
+Time complexity: O(n²) because the inner loop runs n times for every outer-loop iteration.
+Space complexity: O(1)
+
+Example 3: Creating a new list
+def double_numbers(numbers):
+    result = []
+
+    for number in numbers:
+        result.append(number * 2)
+
+    return result
+Time complexity: O(n).
+Space complexity: O(n) because the result list stores n elements
+
+For time complexity:
+
+Consecutive loops are added: O(n) + O(n) = O(n)
+Nested loops are multiplied: O(n) × O(n) = O(n²)
+Constants are ignored: O(2n) -> O(n)
+Smaller terms are ignored: O(n² + n + 5) -> O(n²)
 
 ########
 print(numbers[5]) # O(1)
