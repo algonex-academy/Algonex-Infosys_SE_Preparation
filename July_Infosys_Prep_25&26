@@ -348,22 +348,19 @@ def print_pairs(numbers):
     for first in numbers:
         for second in numbers:
             print(first, second)
-Time complexity: O(n²) because the inner loop runs n times for every outer-loop iteration.
+Time complexity: O(n²) because the inner loop runs n times for every outer-loop iteration
 Space complexity: O(1)
 
 Example 3: Creating a new list
 def double_numbers(numbers):
     result = []
-
     for number in numbers:
         result.append(number * 2)
-
     return result
-Time complexity: O(n).
+Time complexity: O(n)
 Space complexity: O(n) because the result list stores n elements
 
 For time complexity:
-
 Consecutive loops are added: O(n) + O(n) = O(n)
 Nested loops are multiplied: O(n) × O(n) = O(n²)
 Constants are ignored: O(2n) -> O(n)
@@ -386,7 +383,7 @@ i = 1
 while i < n:
     i *= 2 # O(log n)
 
-#Nested loops do not always mean O(n²).
+#Nested loops do not always mean O(n²)
 for i in range(n):
     print(i)
 for j in range(n):
