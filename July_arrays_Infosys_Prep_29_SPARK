@@ -1,0 +1,327 @@
+Complete Array Preparation Roadmap -- Problems only on ARRAYS::
+
+ Operation              Complexity ilaa untundi (just compare it)     
+ Access              | O(1)             
+ Search              | O(n)             
+ Insert at End       | O(1) (amortized) 
+ Insert at Beginning | O(n)             
+ Insert in Middle    | O(n)             
+ Delete              | O(n)             
+
+#### 2. Array Traversal
+Mernadharuu should practice::
+1. Print array
+2. Traverse using index
+3. Traverse using element
+4. Traverse in reverse
+5. Traverse alternate elements
+6. Traverse with step size
+
+#####3. Basic Problems
+Meerandharu must solve confidently
+7. Maximum Element
+8. Minimum Element
+9. Largest & Smallest
+10. Second Largest
+11.Second Smallest
+12.Sum
+13.Average
+14.Count Even
+15. Count Odd
+16. Count Positive
+17. Count Negative
+18. Frequency Count
+19Remove Duplicates
+20. Find Duplicates
+21.Missing Number
+22. Find Unique Element
+
+Problem 1: Find Maximum Element
+Method 1: Linear Traversal (Recommended)
+def find_max(arr):
+    maximum = arr[0]
+    for num in arr:
+        if num > maximum:             Time Complexity: O(n)
+            maximum = num             Space Complexity: O(1)
+    return maximum 
+
+Method 2: Using Built-in Function
+def find_max(arr):                      Time Complexity: O(n)
+    return max(arr)                     Space Complexity: O(1)
+
+Method 3: Sorting
+def find_max(arr):
+    arr.sort()                         Time Complexity: O(n log n)
+    return arr[-1]                     Space Complexity: O(log n) auxiliary (Python sort)
+
+Problem 2: Find Minimum Element
+Input: [12,45,7,89,23]
+Output: 7
+
+#Method 1: Linear Traversal
+def find_min(arr):
+    minimum = arr[0]
+    for i in arr:
+        if i < minimum:         #Time: O(n)
+            minimum = i         #Space: O(1)
+    return minimum
+arr=[12,45,7,89,23]
+print(find_min(arr))
+
+#Method 2
+arr=[12,45,7,89,23]        #tIME:O(n)
+print(min(arr))            #sPACE:O(!)
+
+#Method 3
+arr.sort()               #tIME: O(n log n)
+print(arr[0])            #sPACE: O(log n)
+
+#####Problem 3: Find Largest and Smallest Together
+[12,45,7,89,23]
+Largest = 89, Smallest = 7
+
+#Method 1: Single Traversal (Optimal)
+def largest_smallest(arr):
+    maximum = arr[0]
+    minimum = arr[0]
+    for i in arr:
+        if i > maximum:
+            maximum = i
+        if i < minimum:
+            minimum = i
+    return maximum, minimum
+
+
+arr=[12,45,7,89,23]
+print(largest_smallest(arr))
+
+# Method2
+print(max(arr))
+print(min(arr))
+
+Problem 4: Find Second Largest Element
+[10,20,30,40,50]
+Output: 40
+
+Method 1: Two Variables (Optimal)
+def second_largest(arr):
+    first = second = float('-inf')
+    for num in arr:
+        if num > first:
+            second = first
+            first = num
+        elif num > second and num != first:
+            second = num
+    return second
+
+arr=[10,20,30,40,50]
+print(second_largest(arr))
+
+###Problem 5: Find Second Smallest Element
+def second_smallest(arr):
+    first = second = float('inf')
+    for num in arr:
+        if num < first:
+            second = first
+            first = num
+        elif num < second and num != first:
+            second = num
+    return second
+
+arr=[10,20,30,40,50]
+print(second_smallest(arr))
+
+##Problem 6: Sum of Array Elements
+#Method 1
+def array_sum(arr):
+    total = 0
+    for i in arr:
+        total += i
+    return total
+print(array_sum([1,2,3,4,5]))
+
+#Method2: print(sum(arr))
+
+##Problem 7: Average of Array Elements
+def average(arr):
+    return sum(arr)/len(arr)
+print(average([10,20,30]))
+
+##Problem 8: Count Even Numbers
+def count_even(arr):
+    count = 0
+    for i in arr:
+        if i % 2 == 0:
+            count += 1
+    return count
+
+##Problem 9: Count Odd Numbers
+def count_odd(arr):
+    count = 0
+    for i in arr:
+        if i % 2 != 0:
+            count += 1
+    return count
+
+###Problem 10: Count Positive and Negative Numbers
+def count_numbers(arr):
+    positive = 0
+    negative = 0
+    for i in arr:
+        if i > 0:
+            positive += 1
+        elif i < 0:
+            negative += 1
+    return positive, negative
+
+###4. Searching
+23. SPARK FOLKS should know
+24.Linear Search
+25.Binary Search
+26.First Occurrence
+27.Last Occurrence
+28. Search Insert Position
+29. Search in Rotated Array
+30. Find Peak Element
+
+###5. Sorting
+Ee CONCPEPTS should understand::
+31.Bubble Sort
+32. Selection Sort
+33. Insertion Sort
+34. Merge Sort
+35. Quick Sort
+36. Python's sort() and sorted()
+37. Stable vs Unstable sorting
+
+6. Rotations
+Ivanni you should solve
+38. Left Rotate by One
+39. Right Rotate by One
+40. Left Rotate by K
+41. Right Rotate by K
+42. Rotation using Extra Array
+43. Rotation using Reversal Algorithm
+44. Check Rotation
+
+7. Two Pointer Pattern
+One of the most important interview patterns ivanni...
+45.Reverse Array
+46. Move Zeroes
+47. Two Sum (sorted)
+48. Pair Sum
+49.Pair Difference
+50.Merge Sorted Arrays
+51.Sort 0s, 1s, and 2s
+52.Remove Duplicates
+53. Remove Element
+54, Container With Most Water
+55.  Trapping Rain Water
+
+8. Sliding Window
+- Fixed Window & Variable Window
+
+Problems
+- Maximum Sum Subarray
+- Minimum Sum Subarray
+- Maximum Average
+- Longest Ones
+- Longest Substring
+- Maximum Consecutive Ones
+- Sliding Window Maximum
+
+9. Prefix Sum(Very common in coding rounds)
+Problems
+- Running Sum
+- Prefix Sum
+- Pivot Index
+- Range Sum Query
+- Subarray Sum Equals K
+- Product Except Self
+- Equilibrium Index
+
+#310. Hashing + Arrays
+Students should know how to use dictionaries and sets effectively
+Problems
+- Two Sum
+- Contains Duplicate
+- Majority Element
+- Missing Number
+- Single Number
+- Frequency Count
+- Top K Frequent Elements
+- Longest Consecutive Sequence
+- Intersection of Arrays
+
+11. Kadane's Algorithm -- A must-know algorithm
+Problems
+- Maximum Subarray Sum
+- Maximum Circular Subarray
+- Maximum Product Subarray
+
+12. Matrix (2D Arrays)
+- Ivanni practice cheyali
+- Matrix Traversal
+- Transpose Matrix
+- Rotate Matrix
+- Spiral Traversal
+- Search in Matrix
+- Set Matrix Zeroes
+-Diagonal Traversal
+- Pascal Triangle
+
+13. Binary Search on Arrays
+Students should solve
+Binary Search
+Search in Rotated Array
+Peak Element
+First and Last Position
+Minimum in Rotated Array
+Search Insert Position
+14. Greedy + Arrays
+
+Problems
+
+Jump Game
+Gas Station
+Candy Distribution
+Minimum Platforms
+Merge Intervals
+15. Interview-Level Problems
+
+These are asked frequently in product-style interviews and occasionally in Infosys SP
+- Best Time to Buy and Sell Stock
+- Product of Array Except Self
+- Merge Intervals
+- Next Permutation
+- Three Sum
+- Four Sum
+- Dutch National Flag
+- Maximum Gap
+- Kth Largest Element
+
+###Core Patterns Students Must Recognize
+ Pattern            | Typical Problems                       
+ Linear Traversal   | Max, Min, Sum, Count                   
+ Two Pointers       | Reverse, Move Zeroes, Pair Sum         
+ Sliding Window     | Maximum Sum Subarray, Longest Subarray 
+ Prefix Sum         | Range Sum, Subarray Sum                
+ Hashing            | Two Sum, Frequency, Duplicates         
+ Binary Search      | Search Problems                        
+ Sorting            | Merge Arrays, Kth Largest              
+ Greedy             | Stock, Jump Game                       
+ Kadane's Algorithm | Maximum Subarray                       
+ Matrix Traversal   | Spiral, Rotate Matrix                  
+
+
+Priority for Infosys SP - If you have only one month, prioritize in this order:
+1. Array Basics & Traversal
+2. Searching (Linear & Binary)
+3. Sorting Fundamentals
+4. Two Pointer Pattern
+5. Sliding Window
+6. Hashing
+7. Prefix Sum
+8. Kadane's Algorithm
+9. Matrix Problems
+
