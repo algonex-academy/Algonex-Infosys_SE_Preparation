@@ -1,0 +1,69 @@
+Read -> Observe -> Recognize Pattern ->Code
+
+DAY 1: Arrays Fundamentals(Collection of elements)
+-> Every element occupies equal-sized consecutive memory
+
+Why is
+arr[3]
+O(1)? enduku
+Address = Base + (Index × Size)
+Starting address (Base Address) -- starts at 1000
+Index ->3
+Size of one element -> every integer takes 4 bytes
+The CPU emchesthundii:
+Address = Base + (Index × Size)
+Substitute the values:
+Address = 1000 + (3 × 4)
+        = 1000 + 12
+        = 1012
+Now it immediately goes to
+Address 1012
+and reads 40 ->Done
+
+Size = 10        -> 1 operation
+Size = 1000      -> 1 operation
+Size = 1,000,000 -> 1 operation  -> O(1)
+
+Python List
+
+A Python list is a built-in data structure.
+
+numbers = [10, 20, 30]
+Features
+- Dynamic size
+- Can store different data types
+- Supports indexing
+- Supports slicing
+- Easy to use
+
+Example:
+data = [10, "Python", 3.14, True]
+print(data) #[10, 'Python', 3.14, True]
+
+Python Array: Python provides an array module(All elements are the same type and stored efficiently)
+from array import array
+numbers = array('i', [10, 20, 30]) # Here: 'i' means integer array
+Features:
+- Dynamic size
+- Only one data type
+- More memory efficient than a list for large collections of numbers
+- Faster for numeric data in many cases
+
+ Operation  List              Array (array.array) 
+ Indexing  | O(1)           | O(1)                  
+ Append    | O(1) amortized | O(1) amortized        
+ Insert    | O(n)           | O(n)                  
+ Delete    | O(n)           | O(n)                  
+
+Python lists are implemented as dynamic arrays. They provide array-like O(1) indexing and automatic resizing, but unlike traditional arrays, they can store references to objects of different types
+-> Python also provides array.array for homogeneous data and NumPy arrays for high-performance numerical computing
+
+ Operation                        Complexity      Why                               
+ Access                         | O(1)           | Direct index calculation          
+ Update                         | O(1)           | Replace existing value            
+ Traverse                       | O(n)           | Visit every element               
+ Search (unsorted)              | O(n)           | No ordering information           
+ Search (sorted, binary search) | O(log n)       | Eliminate half each step          
+ Insert at end (dynamic array)  | Amortized O(1) | Usually append; occasional resize 
+ Insert at front                | O(n)           | Shift all elements                
+ Delete from middle             | O(n)           | Shift remaining elements          
