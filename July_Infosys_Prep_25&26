@@ -284,15 +284,23 @@ print(10 in seen)
 
 ##Session 5 — Time and Space Complexity
 Time Complexity?: describes how the number of operations grows as the input size grows
--> Time complexity measures how the running time of an algorithm increases as the input size n increases
+-> Time complexity measures how the running time of an algorithm increases as the input size n increases/As the input becomes larger, how much more work does the algorithm do?
+                         Time Complexity = Number of times the most important operation executes
 -> Space complexity measures how much additional memory an algorithm requires as n increases
 
- O(1)       | Constant     | Accessing arr[0]            
- O(log n)  | Logarithmic  | Binary search                  
- O(n)       | Linear       | One loop through an array      
- O(n log n) | Linearithmic | Merge sort                     
- O(n²)      | Quadratic    | Two nested loops               
- O(2ⁿ)      | Exponential  | Some recursive subset problems 
+ O(1)       | Constant                       | Accessing arr[0]            
+ O(log n)  | Logarithmic                     | Binary search                  
+ O(n)       | Linear                         | One loop through an array      
+ O(n log n) | Linearithmic                   | Merge sort                     
+ O(n²)      | Quadratic                      | Two nested loops               
+ O(1)       | Constant                           | arr[5]                            
+ O(log n)   | Divide repeatedly                  | Binary Search                       
+ O(n)       | One full pass                      | Find maximum                        
+ O(n log n) | Sort efficiently                   | Merge Sort                          
+ O(n²)      | Compare everything with everything | Nested loops                        
+ O(2ⁿ)      | Exponential                        | Naive recursion (subset generation) 
+ O(n!)      | Factorial                          | Permutations                        
+
 
 ##O(1) — Constant Time
 numbers = [10, 20, 30, 40]
@@ -335,6 +343,13 @@ O(n log n)
 O(n²)
 O(2ⁿ)
 O(n!)
+
+Use for Every Problem folkss: Whenever you solve any DSA problem ask these questions before writing code:
+-> What is the input size (n)?
+-> How many times does each loop run?
+->Are loops sequential (+) or nested (×)?
+->Am I creating any extra data structures?
+-> Can I reduce either the time or the extra space?
 
 Example 1: One loop
 def print_numbers(numbers):
@@ -389,6 +404,43 @@ for i in range(n):
 for j in range(n):
     print(j) #O(n) + O(n) = O(2n) = O(n)
 #It is not O(n²) because the loops are sequential, not nested
+
+╰┈➤##Find the time and space complexity
+Q1::
+for i in range(n):
+    print(i)
+Q2::
+for i in range(n):
+    for j in range(n):
+        print(i, j)
+Q3::
+result = []
+for i in range(n):
+    result.append(i)
+Q4::
+i = 1
+while i < n:
+    i *= 2
+Q5::
+for i in range(n):
+    print(i)
+for j in range(n):
+    print(j)
+
+╰┈➤ Rule 1: Count the Loop
+for i in range(n):
+    print(i) #Time = O(n)
+
+╰┈➤Rule 2: Sequential Loops Add
+for i in range(n):
+    print(i)
+for j in range(n):
+    print(j) #n + n = 2n - O(n) -Because Big-O measures growth, not exact counts
+
+
+
+
+
 
 ####Session 6 — Guided Coding Problems
 Problem 1 — Largest Element
