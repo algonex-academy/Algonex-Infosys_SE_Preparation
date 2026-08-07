@@ -45,6 +45,29 @@ y = x
 z = y
 print(x is z)
 
+Q4: #Trap
+x = "Python"
+y = x
+x += " AI"
+print(y)
+
+Q5: 
+x = [1,2]
+y = x
+x.append(3)
+print(y)
+
+Q6: 
+x = (10,20)
+y = x
+print(x is y)
+
+Q7: 
+a = {1,2}
+b = a
+b.add(5)
+print(a)
+
 What is the difference between a variable and an object?
 Why do we say a variable references an object instead of storing it?
 
@@ -130,3 +153,66 @@ Concept                            Key Idea
 -> Mutable objects can change in place
 -> Immutable objects never change; operations create new objects instead
 
+Chapter 1: Array Fundamentals
+    |
+Chapter 2: Traversal Pattern
+    |
+Chapter 3: Searching Pattern
+    |
+Chapter 4: Insertion & Deletion
+    |
+Chapter 5: Reverse Pattern
+    |
+Chapter 6: Prefix & Suffix Thinking
+    |
+Chapter 7: Hashing with Arrays
+    |
+Chapter 8: Two Pointer Foundation
+    |
+Chapter 9: Sliding Window Foundation
+    |
+Chapter 10: Interview Questions
+
+
+╰┈➤ Operations on Arrays -Every array interview problem builds on these
+# Operation 1: Traversal
+1 2 3 4 5 #Visit every element
+
+for i in range(len(arr)):
+    print(arr[i]) #O(n)
+
+#Operation 2: Access
+arr[5] # O(1)
+
+#Operation 3
+Searching -
+Unsorted: 5 9 2 8 # O(n)
+Sorted: 2 4 6 8 10 #Binary Search: O(log n)
+
+##Operation 4
+#Insertion
+Append: arr.append(50) #Usually efficient
+
+#Middle insertion: 1 2 3 4
+Insert 100
+Need shifting: 1 2 100 3 4 #Time: O(n)
+
+##Operation 5
+#Deletion
+Delete first element: 1 2 3 4 5   Becomes 2 3 4 5
+Everything shifts left: O(n)
+
+##Operation 6
+#Update
+arr[2] = 100
+#Direct update: O(1)
+
+ Operation             Time                Reason                   
+ Access            | O(1)           | Direct indexing          
+ Update            | O(1)           | Replace existing value   
+ Traversal         | O(n)           | Visit every element      
+ Search (unsorted) | O(n)           | May inspect all elements 
+ Search (sorted)   | O(log n)       | Binary search            
+ Insert at end     | Amortized O(1) | Dynamic array append     
+ Insert at middle  | O(n)           | Shift elements           
+ Delete            | O(n)           | Shift elements           
