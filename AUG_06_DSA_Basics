@@ -1,0 +1,132 @@
+1. Variables vs Objects
+# Variable contains a value-> Idi Python way kadhuu
+A variable points to (references) an object in memory or A variable is a name that refers to an object in memory
+╰┈➤Adi refer chesthundi stoire cheskodhu point or refer chesthundi anthee
+
+x = 10 # 10 is an object
+x is only a reference (name) to that object- Think of x as a label attached to an object
+
+╰┈➤Objects: Everything in Python is an objec (10, 3.14, "Aneesha", True,[1,2,3], {"a":1} #Everything is an object)
+Each object has:
+Identity
+Type
+Value
+
+Identity: Where is this object located? with id()
+x = 10
+print(id(x)) #140720... - in CPython it's related to its memory address as object's identity
+
+Example: a = 100
+         b = a #How many integers exist? 2??
+Only one integer object exists ->Two variables reference it
+
+#Assignment
+x = 10
+y = x #Beginners Python copy chesindi anukuntaaru but no - Still one object but two variables
+
+╰┈➤Reassignment
+a = 100
+b = a
+b = 500 # any change in a?? -It creates (orreuses) another integer object and changes what b refers to - Mari o/p enti??
+                            Variables are names -Objects hold the data
+Q1:: x = 50
+    y = x
+    print(x is y)
+
+Q2::
+  a = "Hello"
+  b = a
+  print(a == b)
+  print(a is b)
+
+Q3::
+x = 100
+y = x
+z = y
+print(x is z)
+
+What is the difference between a variable and an object?
+Why do we say a variable references an object instead of storing it?
+
+2. Mutable vs Immutable
+Immutable: Cannot be changed after creation
+int,float, bool, str, tuple, frozenset
+
+#Example:  x = 10
+Memory:   x -----> 10
+          x = x + 5
+Does Python change 10? -> No
+Instead it creates a new object
+Old: x -----> 10
+New: 10
+x -----> 15
+The object 10 never changes -> A new object 15 is created
+
+Mutable: Can be modified
+list,dict, set, bytearray
+
+3. Assignment vs Copy
+Assignment
+a = [10,20]
+b = a
+b.append(30)
+print(a) #[10,20,30]
+#Why Because both variables refer to the same object
+
+##Copy
+a = [10,20]
+b = a.copy() #Now there are two different list objects
+b.append(30)
+a = [10,20]
+b = [10,20,30]
+
+##4. Shallow Copy vs Deep Copy
+data = [
+    [1,2],
+    [3,4]
+    ]
+#Shallow Copy
+import copy
+new = copy.copy(data)
+#The outer list is copied -> The inner lists are shared
+new[0].append(99) #data [[1,2,99],
+                         [3,4]]
+
+╰┈➤𝗦𝗰𝗵𝗼𝗼𝗹 𝗘𝘅𝗮𝗺𝗽𝗹𝗲
+The classroom contains
+Bench A
+Bench B
+
+#Shallow Copy - You create another classroom
+But instead of buying new benches, you simply place the same benches in the second classroom
+There are two classrooms, But only one Bench A
+If someone paints Bench A red, both classrooms now show a red Bench A
+
+#Deep Copy
+You create another classroom
+You buy
+New Bench A
+New Bench B  --> Painting one bench affects only that classroom
+
+╰┈➤Shallow Copy: Creates a new outer container, but the elements inside are still references to the original nested objects. Nested mutable objects are shared
+╰┈➤Deep Copy: Creates a completely independent copy by recursively copying every nested object. No mutable objects are shared
+                                    Shallow Copy = Copy the box,share the items inside ardmindhaa
+                                    Deep Copy = Copy the box and copy every item inside the box
+
+Concept                            Key Idea                                                                             
+ Variable             | A name that refers to an object                                                      
+ Object               | Data stored in memory                                                                
+ Mutable              | Object can be modified in place (e.g., list, dict, set)                        
+ Immutable            | Object cannot be modified; changes create a new object (e.g., int, str, tuple) 
+ Assignment (`b = a`) | Creates another reference to the same object                                         
+ Copy (`a.copy()`)    | Creates a new outer object (for lists)                                               
+ Shallow Copy         | Copies only the outer container; nested objects are still shared                     
+ Deep Copy            | Recursively copies all nested objects                                                
+ Reference            | The link from a variable name to an object in memory                                 
+
+##A simple rule to remember
+-> Assignment creates another reference
+-> Copy creates another object
+-> Mutable objects can change in place
+-> Immutable objects never change; operations create new objects instead
+
