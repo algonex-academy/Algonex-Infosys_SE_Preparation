@@ -1,4 +1,4 @@
-### Dictionary Problem-Solving Track
+### Dictionary Problem-Solving Track cheseyandi confidence level increase avuthundii
 Whenever you see a problem involving:
 frequency
 duplicates
@@ -6,9 +6,7 @@ unique values
 fast lookup
 matching
 grouping
-counting
-"have I seen this before?": pairs, complements, prefix sums ## Can a dictionary remember something for me?
-Can a dictionary remember something for me?
+counting "have I seen this before?": pairs, complements, prefix sums ## Can a dictionary remember something for me? alochinchandi like Can a dictionary remember something for me?
 WHAT am I remembering?
         |
 WHAT should be the key?
@@ -18,8 +16,6 @@ WHAT should be the value?
 When should I update it?
       |
 When should I check it?
-
-
 
 #Problem 1 — Frequency of Elements
 Given a list: arr = [1, 2, 2, 3, 1, 4, 2]
@@ -52,16 +48,96 @@ Update frequency
 
 Phase 1 — Foundation
 1. Check if a key exists
+student = {
+    "name": "Ganesh",
+    "age": 16
+}
+if "salary" in student:
+    print(student["salary"])
+else:
+    print("Salary not available")
 
+2. Count frequencies #arr = [1, 2, 2, 3, 1, 2, 4] ,
+#text = "Algonex IT Solutions"  -> {'b': 1, 'a': 3, 'n': 2}
+arr = [1, 2, 2, 3, 1, 2, 4]
+freq = {}
+for num in arr:
+    freq[num] = freq.get(num, 0) + 1
+print(freq)
 
+if i in dict:
+    dict[i] = dict[i] + 1
+else:
+    dict[i] = 1
 
-Count frequencies
-Find maximum frequency
-Find minimum frequency
-Find duplicate elements
-Find unique elements
-First repeating element
-First non-repeating element
+## Count words in this
+text = "python is easy and python is powerful" 
+words = text.split()
+freq = {}
+for word in words:
+    freq[word] = freq.get(word, 0) + 1
+print(freq)
+
+3. Find maximum frequency
+arr = [1, 2, 2, 3, 2, 4, 3]
+freq = {}
+for num in arr:
+    freq[num] = freq.get(num, 0) + 1
+max_element = None
+max_count = 0
+for num, count in freq.items():
+    if count > max_count:    #if count < min_count -> For minimun
+        max_count = count
+        max_element = num
+print(max_element)
+print(max_count)
+
+4. Find minimum frequency
+5. Find duplicate elements
+arr = [1, 2, 3, 2, 4, 1, 5]
+freq = {}
+for num in arr:
+    freq[num] = freq.get(num, 0) + 1
+duplicates = []
+for num, count in freq.items():
+    if count > 1:
+        duplicates.append(num)
+print(duplicates)
+
+6. Find unique elements
+arr = [1, 2, 3, 2, 4, 1, 5]
+freq = {}
+for num in arr:
+    freq[num] = freq.get(num, 0) + 1
+duplicates = []
+for num, count in freq.items():
+    if count > 1:
+        duplicates.append(num)
+print(duplicates)
+
+7. First repeating element
+Current element ->  Have I seen it?
+                   |        |
+                 YES       NO
+                 |          |
+                answer    remember
+arr = [5, 3, 4, 3, 5, 6]
+seen = {}
+for num in arr:
+    if num in seen:
+        print(num)
+        break
+    seen[num] = True
+
+8. First non-repeating element
+text = "swiss"
+freq = {}
+for ch in text:
+    freq[ch] = freq.get(ch, 0) + 1
+for ch in text:
+    if freq[ch] == 1:
+        print(ch)
+        break
 
 ##Phase 2 — Core Patterns
 Two Sum
