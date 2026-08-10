@@ -1,0 +1,90 @@
+### Dictionary Problem-Solving Track
+Whenever you see a problem involving:
+frequency
+duplicates
+unique values
+fast lookup
+matching
+grouping
+counting
+"have I seen this before?": pairs, complements, prefix sums ## Can a dictionary remember something for me?
+Can a dictionary remember something for me?
+WHAT am I remembering?
+        |
+WHAT should be the key?
+          |
+WHAT should be the value?
+        |
+When should I update it?
+      |
+When should I check it?
+
+
+
+#Problem 1 — Frequency of Elements
+Given a list: arr = [1, 2, 2, 3, 1, 4, 2]
+Find how many times each number occurs #{1: 2,2: 3,3: 1,4: 1}
+
+# Problem 2 — Count Characters
+text = "programming"
+Find the frequency of every character.
+p -> 1
+r -> 2
+o -> 1
+g -> 2
+a -> 1
+m -> 2
+i -> 1
+n -> 1 #Hint: dictionary + loop + conditional logic
+#######Your target thought process:
+Input
+   |
+What must I remember?
+   |
+character → frequency
+   |
+Dictionary
+   |
+Scan every character
+  |
+Update frequency
+
+
+Phase 1 — Foundation
+1. Check if a key exists
+
+
+
+Count frequencies
+Find maximum frequency
+Find minimum frequency
+Find duplicate elements
+Find unique elements
+First repeating element
+First non-repeating element
+
+##Phase 2 — Core Patterns
+Two Sum
+Two Strings Anagram
+Remove duplicates
+Common elements
+Missing number
+Frequency comparison
+Character mapping
+
+####Phase 3 — Advanced
+Group Anagrams
+Longest Consecutive Sequence
+Majority Element
+Subarray Sum
+Longest Subarray with Given Sum
+Count subarrays with sum K
+Isomorphic Strings
+
+###Phase 4 — Interview Level
+Top K Frequent Elements
+LRU Cache concept
+Sliding Window + Dictionary
+Prefix Sum + Dictionary
+Nested data processing
+Real-world API/data-analysis problems
