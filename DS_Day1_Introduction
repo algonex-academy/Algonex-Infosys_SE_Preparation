@@ -1,0 +1,263 @@
+   #### THE ROADMAP
+                   DSA MASTERY
+          ┌──────────────┴──────────────┐
+     DATA STRUCTURES               ALGORITHMS
+          │                             │
+ Arrays / Strings                 Searching
+ Hashing                           Sorting
+ Linked Lists                      Recursion
+ Stack / Queue                     Two Pointers
+ Trees                             Sliding Window
+ Heap                              Prefix Sum
+ Graphs                            Binary Search
+                                  Greedy
+                                  Backtracking
+                                  DP
+
+                 PROBLEM SOLVING
+        ┌──────────────┼──────────────┐
+ Understand       Build logic      Analyze
+ problem          step-by-step     complexity
+        │              │              │
+        └──────────────┼──────────────┘
+                      CODE
+
+PHASE 0 — DSA FOUNDATION
+##Module 0.1 — What is Data?
+              Data                        We'll use real examples kadaa:
+               |                                 Employee records
+              Data Organization                  Bank transactions
+               |                                 Amazon orders
+              Data Structure                     Instagram followers
+               |                                 College students
+              Algorithm                          Customer transactions
+               |
+              Program
+
+##Module 0.2 — What is a Data Structure?
+Data
+Data Structure
+Algorithm
+Program
+
+#For example-Suppose Amazon has:
+10 million orders
+How do we store them?
+How do we search an order?
+How do we find the most expensive order?
+How do we count orders per customer?
+How do we remove an order? -> Different problems require different structures-Ikkadee Data Structures kaavali
+
+###PHASE 1 — PYTHON DATA STRUCTURES
+Since you're using Python- we need problem-solving-level mastery, not syntax-level knowledge
+1. Lists -When should I use a list?
+arr = [10, 20, 30, 40]
+#Ikkadeee You'll understand:
+indexing
+- traversal
+insertion
+- deletion
+searching
+- updating
+slicing
+- nested lists
+mutability
+- references
+copying
+- shallow vs deep copy
+dynamic resizing
+- list operations
+complexity of each operation
+
+##2. Strings
+s = "developer"
+Ikkada will see:
+indexing
+- traversal
+slicing
+- immutability
+character counting
+- frequency problems
+palindrome
+- anagrams
+- substring problems
+
+##3. Tuples
+data = (10, 20, 30)
+
+-> List vs Tuple
+-> Mutable vs Immutable
+-> Performance implications
+-> Use cases
+
+##4. Sets
+s = {10, 20, 30}
+
+##5. Dictionaries
+d = {
+    "Ganesh": 95,
+    "Rahul": 87
+}
+
+#Ikkada We'll go deep into :
+- key-value mapping
+hashing
+- lookup
+frequency counting
+- grouping
+indexing
+- caching
+
+##PHASE 2 — COMPLEXITY
+Manam Not lije: "O(n) means linear 
+will learn like: What?, Why?, How?, When?
+
+O(1), O(log n),O(n),O(n log n),O(n²),O(2ⁿ),O(n!)
+For example:
+for i in arr:   # n operations-> O(n)
+    print(i)
+
+for i in arr:
+    for j in arr:  #n × n operations -> O(n²)
+        print(i, j)
+
+##PHASE 3 — ARRAY MASTERY cheseyali appudee codinglo 1st question cheyagalavv
+Array Fundamentals
+      |
+Traversal
+      |
+Searching
+      |
+Min / Max
+      |
+Frequency
+    |
+Reverse
+    |
+Duplicates
+    |
+Two Pointers
+    |
+Sliding Window
+    |
+Prefix Sum
+    |
+Hashing
+    |
+Binary Search
+
+You'll solve problems such as:(Manam almost cover chesaam)
+-Find maximum
+Find second maximum                            For every problem:
+-> Reverse array                            1. Understand the problem
+Remove duplicates                          2. Identify input/output
+-> Move zeros                              3. Brute force
+Rotate array                               4. Think about optimization (Inkemina better logic)
+- Find missing number                      5. Select data structure/pattern
+Find duplicate                             6. Write algorithm(General steps raayu)
+-Two Sum                                   7. Dry run
+Three Sum                                  8. Code raskoo
+- Maximum subarray                         9. Test edge cases
+Best time to buy/sell stock                10. Time complexity
+- Longest subarray                         11. Space complexity
+                                          12. Interview explanation elaa ivvalo chuskovali
+
+#####PHASE 4 — STRINGS
+String traversal
+      |
+Character frequency
+      |
+Palindrome
+    |
+Anagram
+    |
+Two pointers
+    |
+Sliding window
+    |
+Substring problems
+    |
+Hashing
+
+###PHASE 5 — LINEAR DATA STRUCTURES
+Linked List
+  |
+Stack
+  |
+Queue
+  |
+Deque
+
+###PHASE 6 — RECURSION
+def f(n):
+    if n == 0:
+        return
+    f(n - 1)
+
+# using:
+Call Stack
+    |
+Function calls
+      |
+Return values
+      |
+Base case
+      |
+Recursive case
+
+
+                              
+                                                  PROBLEM
+                                                     |
+                                           What is being asked?
+                                                     |
+                                            What information
+                                            do I need to track?
+                                                     |
+                                            Which structure
+                                            helps me track it? think folks
+                                                     |
+                                             What operations
+                                             do I need?
+                                                     |
+                                            Can I optimize it? okasaari brainki work ivvandi
+                                                     |
+                                                  CODE rayandi
+                                                     |
+                                               COMPLEXITY ardam cheskovali
+
+ARRAY PROBLEM-SOLVING — LEVEL 1(manam Turn a problem statement into a sequence of operations)
+#Problem 1 — Find the Maximum
+arr = [12, 45, 7, 89, 23, 56] #89
+"max(arr)"  -> That uses Python's built-in and skips the actual problem-solving
+
+##First pseudocode raaskondi ilaa:
+max_value = first element
+12 -> max = 12
+45 -> 45 > 12 → max = 45
+7  -> 7 > 45  → no
+89 -> 89 > 45 → max = 89
+23 -> 23 > 89 → no
+56 -> 56 > 89 → no
+answer = 89
+
+arr = [12, 45, 7, 89, 23, 56]
+max_value = arr[0]
+for i in arr:
+    if i > max_value:
+        max_value = i
+print(max_value) #O(n) time kadaa
+
+#Problem 2 — Second Largest cheyandi
+arr = [10, 5, 20, 8, 20, 15] #sorted(set(arr))[-2]
+
+largest = arr[0]
+sec = None
+for i in arr:
+    if i > largest:
+        sec = largest
+        largest = i
+    elif i > sec and i != largest:
+        sec = i
+print(sec) -> Inkoo logic edinaa alochinchuu
+
