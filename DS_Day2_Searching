@@ -213,6 +213,118 @@ while left <= right:
     else:
         right = mid - 1 # Found
 
-╰┈➤Enduku Binary Search useful
+╰┈➤Enduku Binary Search usefuland powerful avuthundi
 Linear Search  -> O(n)
 Binary Search  -> O(log n) #Ee log n pattern is one of the most important concepts in DS gurthupetkondii
+
+Suppose you have: 1,000 elements -> Linear search may require around: 1,000 comparisons
+                                 -> Binary search: 1000 -> 500 ->250 -> 125 -> 62 -> 31 -> 15 -> 7 -> 3 -> 1 #Only around 10 iterations
+For: 1,000,000 elements -> Binary search needs roughly: 20 iterations because: 2²⁰ ≈ 1,000,000 antheena??
+
+ikkada Binary search is not: A faster version of linear search
+-> A search strategy that exploits sorted order to eliminate half of the remaining possibilities at every step
+
+╰┈➤::TRY ME:: (Check middle -> eliminate half -> check new middle -> repeat)
+arr = [3, 7, 11, 15, 19, 24, 31, 42, 50]
+target = 31 
+
+left/right -> define search space       
+left = mid + 1  #The middle element is too small, so the answer must be somewhere to its right
+right = mid - 1  # The middle element is too large, so the answer must be somewhere to its left
+mid ->  choose the middle
+comparison -> decide which half survives
+left/right update -> discard the other half
+
+left = 0
+right = len(arr) - 1
+while left <= right:
+    mid = (left + right) // 2
+    if arr[mid] == target:
+        print("Found")
+        break
+    elif arr[mid] < target:
+        left = mid + 1
+    else:
+        right = mid - 1
+
+╰┈➤::TRY ME:: 
+arr = [2, 5, 8, 12, 16, 21, 27, 35, 40]
+target = 5
+
+arr = [2, 5, 8, 12, 16, 21, 27, 35, 40]
+target = 5
+
+left = 0
+right = len(arr) - 1
+while left <= right:
+    mid = (left + right) // 2
+    if arr[mid] == target:
+        print("Found")
+        break
+    elif arr[mid] < target:
+        left = mid + 1
+    else:
+        right = mid - 1
+
+╰┈➤::TRY ME:: 1. Target is the first element
+arr = [2, 5, 8, 12, 16]
+target = 2
+
+Initially:
+left = 0
+right = 4
+mid = 2
+
+Check:
+arr[2] = 8
+8 > 2
+
+So: right = mid - 1 Next: mid = 0 -> arr[0] == 2 vachesindhii
+
+╰┈➤::TRY ME:: 2. Target is the last element
+arr = [2, 5, 8, 12, 16]
+target = 16
+
+First:
+mid = 2
+arr[mid] = 8
+
+Since: 8 < 16
+we do: left = mid + 1
+Now:  left = 3
+      right = 4
+Next middle: mid = 3    12 < 16
+So:  left = 4
+Next: mid = 4 -> Found
+
+╰┈➤::TRY ME:: 3. Target does not exist (Interviewski imp)
+arr = [2, 5, 8, 12, 16]
+target = 10
+
+We eventually reach:
+left = 3
+right = 2
+
+Notice: left > right -> The search space has disappeared
+Therefore: while left <= right: -> stops
+That means: Target does not exist
+A clean version is: arr = [2, 5, 8, 12, 16]
+target = 10
+
+left = 0
+right = len(arr) - 1
+found = False
+while left <= right:
+    mid = (left + right) // 2
+    if arr[mid] == target:
+        found = True
+        break
+    elif arr[mid] < target:
+        left = mid + 1
+    else:
+        right = mid - 1
+if found:
+    print("Found")
+else:
+    print("Not Found")
+
