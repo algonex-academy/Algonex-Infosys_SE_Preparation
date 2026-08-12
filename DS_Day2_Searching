@@ -126,3 +126,93 @@ print(last) #Pattern chduu: Find -> remember -> continue       answer = i
 ╰┈➤Ikakda last = -1 ni sentinel value antaam used when Target was not found meeru coding roundslo chudochu
 
 ╰┈➤Now Count Occurrences
+arr = [10, 20, 5, 20, 8, 20, 15]
+target = 20
+count = 0
+for x in arr:
+    if x == target:
+        count += 1
+print(count)
+
+Pattern 1 — Existence
+Pattern 2 — Position
+Pattern 3 — Frequency
+
+Your Next Challenge in Algonex Buddy Pattern
+-> Don't code immediately -First understand the requirement
+arr = [4, 7, 2, 7, 9, 7, 3, 7]
+target = 7
+
+mundhu find all three:
+1. Does 7 exist?
+2. What is the first index?
+3. What is the last index?
+4. How many times does 7 occur?
+
+Expected answers enti:
+exists = ?
+first = ?
+last = ?       --> Write one single for loop that calculates all four
+count = ? 
+
+Restrictions:
+-> One loop, if, variables, break only if genuinely necessary
+-> No in, No .index(), No .count()
+##This is where we start combining patterns rather than solving isolated questions ardamindaa
+
+╰┈➤Searching Pattern 3 — Binary Search
+#Linear Search Works on: [10, 5, 20, 8, 15]
+We can check: 10 -> 5 -> 20 -> 8 -> 15 every element -> Time: O(n)
+
+#Binary Search - Requires a sorted collection
+arr = [2, 5, 8, 10, 15, 20, 25, 30]  -> Instead of checking every element- we repeatedly cut the search space in half ->That's the entire idea anthee
+
+##╰┈➤The Core Idea chudhaama (start -> middle -> compare)
+arr = [2, 5, 8, 10, 15, 20, 25, 30]
+target = 25
+
+#Start:
+left                    right
+ |                        |
+[2, 5, 8, 10, 15, 20, 25, 30]
+
+#Find the middle:
+middle = (left + right) // 2 #10
+
+#Compare: 10 < 25
+
+-> Because the array is sorted, we immediately know: Everything to the left of 10 is also too small
+So discard half: [10, 15, 20, 25, 30]
+                  |                |
+                left            right
+
+#Again find middle: 20 and Compare: 20 < 25 ->Discard everything before it
+-> Now: [25, 30] and Middle: 25 ->Found kadaa
+
+╰┈➤Ikkada The Three Decisions anthee
+Every iteration asks exactly one question: arr[mid] == target
+If yes: FOUND
+
+If: arr[mid] < target  ->Target must be on the right: left = mid + 1
+If: arr[mid] > target  ->Target must be on the left: right = mid - 1 ##Antee idee binary search
+
+╰┈➤Basic code ownga try cheyandii
+arr = [2, 5, 8, 10, 15, 20, 25, 30]
+target = 25
+
+left = 0
+right = len(arr) - 1
+
+while left <= right:
+    mid = (left + right) // 2
+    if arr[mid] == target:
+        print("Found")
+        break
+    elif arr[mid] < target:
+        left = mid + 1
+    else:
+        right = mid - 1 # Found
+
+╰┈➤Enduku Binary Search useful
+Linear Search  -> O(n)
+Binary Search  -> O(log n) #Ee log n pattern is one of the most important concepts in DS gurthupetkondii
