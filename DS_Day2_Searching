@@ -134,6 +134,7 @@ for x in arr:
         count += 1
 print(count)
 
+╰┈➤ Undertanding Search Pattern
 Pattern 1 — Existence
 Pattern 2 — Position
 Pattern 3 — Frequency
@@ -145,30 +146,28 @@ target = 7
 
 mundhu find all three:
 1. Does 7 exist?
-2. What is the first index?
-3. What is the last index?
-4. How many times does 7 occur?
+2. What is the first and last index?
+3. How many times does 7 occur?
 
 Expected answers enti:
 exists = ?
-first = ?
-last = ?       --> Write one single for loop that calculates all four
+first = ? and last = ?       --> Write one single for loop that calculates all four
 count = ? 
 
 Restrictions:
 -> One loop, if, variables, break only if genuinely necessary
--> No in, No .index(), No .count()
+-> No in, .index(), .count()
 ##This is where we start combining patterns rather than solving isolated questions ardamindaa
 
 ╰┈➤Searching Pattern 3 — Binary Search
 #Linear Search Works on: [10, 5, 20, 8, 15]
 We can check: 10 -> 5 -> 20 -> 8 -> 15 every element -> Time: O(n)
 
-#Binary Search - Requires a sorted collection
-arr = [2, 5, 8, 10, 15, 20, 25, 30]  -> Instead of checking every element- we repeatedly cut the search space in half ->That's the entire idea anthee
+#Binary Search - Requires a sorted collection like:
+arr = [2, 5, 8, 10, 15, 20, 25, 30]  # Instead of checking every element- we repeatedly cut the search space in half ->That's the entire idea anthee
 
-##╰┈➤The Core Idea chudhaama (start -> middle -> compare)
-arr = [2, 5, 8, 10, 15, 20, 25, 30]
+##╰┈➤The Core Idea chudhaama (start -> middle -> compare) 
+Example: arr = [2, 5, 8, 10, 15, 20, 25, 30]
 target = 25
 
 #Start:
@@ -179,20 +178,16 @@ left                    right
 #Find the middle:
 middle = (left + right) // 2 #10
 
-#Compare: 10 < 25
-
--> Because the array is sorted, we immediately know: Everything to the left of 10 is also too small
-So discard half: [10, 15, 20, 25, 30]
-                  |                |
-                left            right
+#Compare: 10 < 25 -> Because the array is sorted -we know: Everything to the left of 10 is also too small
+So discard to half: [10, 15, 20, 25, 30]
+                      |               |
+                    left            right
 
 #Again find middle: 20 and Compare: 20 < 25 ->Discard everything before it
 -> Now: [25, 30] and Middle: 25 ->Found kadaa
 
 ╰┈➤Ikkada The Three Decisions anthee
-Every iteration asks exactly one question: arr[mid] == target
-If yes: FOUND
-
+Every iteration asks exactly one question: arr[mid] == target -> If yes: FOUND
 If: arr[mid] < target  ->Target must be on the right: left = mid + 1
 If: arr[mid] > target  ->Target must be on the left: right = mid - 1 ##Antee idee binary search
 
@@ -210,16 +205,16 @@ while left <= right:
         break
     elif arr[mid] < target:
         left = mid + 1
-    else:
-        right = mid - 1 # Found
+else:
+    right = mid - 1 # Found
 
-╰┈➤Enduku Binary Search usefuland powerful avuthundi
+╰┈➤Enduku Binary Search useful and powerful avuthundi than Linear Search
 Linear Search  -> O(n)
 Binary Search  -> O(log n) #Ee log n pattern is one of the most important concepts in DS gurthupetkondii
 
 Suppose you have: 1,000 elements -> Linear search may require around: 1,000 comparisons
                                  -> Binary search: 1000 -> 500 ->250 -> 125 -> 62 -> 31 -> 15 -> 7 -> 3 -> 1 #Only around 10 iterations
-For: 1,000,000 elements -> Binary search needs roughly: 20 iterations because: 2²⁰ ≈ 1,000,000 antheena??
+For: 1,000,000 elements -> Binary search needs roughly: 20 iterations because: 2²⁰ ≈ 1,000,000 antheena?? that's why O(logn) complexity
 
 ikkada Binary search is not: A faster version of linear search
 -> A search strategy that exploits sorted order to eliminate half of the remaining possibilities at every step
@@ -266,7 +261,8 @@ while left <= right:
     else:
         right = mid - 1
 
-╰┈➤::TRY ME:: 1. Target is the first element
+╰┈➤Binary Search Pattern with/without Target 
+#1. Target is the first element
 arr = [2, 5, 8, 12, 16]
 target = 2
 
@@ -281,11 +277,11 @@ arr[2] = 8
 
 So: right = mid - 1 Next: mid = 0 -> arr[0] == 2 vachesindhii
 
-╰┈➤::TRY ME:: 2. Target is the last element
+╰┈➤ 2. Target is the last element
 arr = [2, 5, 8, 12, 16]
 target = 16
 
-First:
+#First:
 mid = 2
 arr[mid] = 8
 
@@ -297,7 +293,7 @@ Next middle: mid = 3    12 < 16
 So:  left = 4
 Next: mid = 4 -> Found
 
-╰┈➤::TRY ME:: 3. Target does not exist (Interviewski imp)
+╰┈➤ 3. Target does not exist (Interviewski imp)
 arr = [2, 5, 8, 12, 16]
 target = 10
 
