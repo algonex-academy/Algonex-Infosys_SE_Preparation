@@ -1,0 +1,19 @@
+def find_pairs(values: list[int], target: int) -> list[tuple[int, int]]:
+    result = []
+    for i in range(len(values)):
+        for j in range(i + 1, len(values)):
+            if values[i] + values[j] == target:
+                result.append((values[i], values[j]))
+    return result #Time complexity??
+
+╰┈➤𝗦𝗼𝗿𝘁𝗶𝗻𝗴 𝗶𝗻 𝗗𝗮𝘁𝗮𝘀𝘁𝗿𝘂𝗰𝘁𝘂𝗿𝗲𝘀
+ Algorithm                                      Best                  Average                 Worst             Auxiliary space                             
+Bubble sort with early exit |                   O(n)                  O(n²)                   O(n²) |                      O(1)                            
+ Selection sort              |                  O(n²)                   O(n²)                   O(n²) |                      O(1)                   
+ Insertion sort              |                   O(n)                   O(n²)                   O(n²) |                      O(1)                           
+ Merge sort                  |             O(n log n)              O(n log n)              O(n log n) |                      O(n)                      
+ Quicksort                   |             O(n log n)              O(n log n)                   O(n²) |      Depends on recursion                    
+ Heap sort                   |             O(n log n)              O(n log n)              O(n log n) |                      O(1)                              
+ Counting sort               |               O(n + k)                O(n + k)                O(n + k) |          O(k) or O(n + k)                          
+ Radix sort                  | Depends on digits/base  Depends on digits/base  Depends on digits/base | Usually additional memory 
+
