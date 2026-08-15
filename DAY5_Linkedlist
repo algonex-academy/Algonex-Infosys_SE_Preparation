@@ -1,0 +1,55 @@
+Linked Lists in Python
+
+ Singly linked list | Each node points to the next node 
+ Doubly linked list | Each node points to both the next and previous nodes 
+ Circular singly linked list | The last node points back to the first node 
+ Circular doubly linked list | Next and previous references form a circle 
+
+1. What is a linked list?:A linked list is a sequence of objects called nodes
+Each node contains:
+A value
+A reference to the next node
+
+Example::
+head
+ |
+[10 | next] -> [20 | next] -> [30 | None]
+
+The first node contains 10 and points to the second node
+The second node contains 20 and points to the third node
+The third node contains 30 and points to None, which marks the end of the list
+
+The Node class
+Python does not provide a built-in general-purpose linked-list class, so we implement one manually
+
+The basic node syntax is:
+class Node:
+    def __init__(self, value):
+        self.value = value
+        self.next = None
+
+# Create three nodes:
+first = Node(10)
+second = Node(20)
+third = Node(30)
+
+Initially, the nodes are independent:
+first  → [10 | None]
+second → [20 | None]
+third  → [30 | None]
+
+Connect them:
+first.next = second
+second.next = third
+
+Now the structure is:
+first
+  |
+[10 | •] -> [20 | •] -> [30 | None]
+The first node becomes the head:
+head = first
+
+4. What is head?: head stores a reference to the first node
+head = first
+The entire list can be reached through head: head → first → second → third
+
